@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Lottie Animation for top section -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieTop"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/cloud1" />
+
+    <!-- Question part -->
+    <LinearLayout
+        android:id="@+id/layQuestionPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_shadowColorDark="@color/shadow_color_bottom"
+            app:neumorph_shadowColorLight="@color/shadow_color_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottsss"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerInside"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/q1" />
+
+                <TextView
+                    android:id="@+id/lblPergunta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:paddingLeft="5dp"
+                    android:text="দিল্লির হিংহাসনে অধিষ্ঠিত প্রথম মুসলিম নারী কে?"
+                    android:textColor="@color/quiz_icon_background"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+    </LinearLayout>
+
+    <!-- Radio Button part -->
+    <LinearLayout
+        android:id="@+id/layRadioPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_shadowColorDark="@color/shadow_color_bottom"
+            app:neumorph_shadowColorLight="@color/shadow_color_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <RadioButton
+                        android:id="@+id/opcaoA"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:buttonTint="#7D5801"
+                        android:text="Option A"
+                        android:textColor="#7D5801"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/opcaoB"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:buttonTint="#7D5801"
+                        android:text="Option B"
+                        android:textColor="#7D5801"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/opcaoC"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:buttonTint="#7D5801"
+                        android:text="Option C"
+                        android:textColor="#7D5801"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/opcaoD"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:buttonTint="#7D5801"
+                        android:text="Option D"
+                        android:textColor="#7D5801"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/confirm"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/btn_orange"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="loadAnswer"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+    </LinearLayout>
+
+</LinearLayout>
